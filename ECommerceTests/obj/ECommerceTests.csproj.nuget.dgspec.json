@@ -43,13 +43,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "DotNetSeleniumExtras.WaitHelpers": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.8.0, )"
             },
             "NUnit": {
               "target": "Package",
-              "version": "[3.14.0, )"
+              "version": "[4.0.1, )"
             },
             "NUnit.Analyzers": {
               "target": "Package",
@@ -59,9 +63,9 @@
               "target": "Package",
               "version": "[4.5.0, )"
             },
-            "coverlet.collector": {
+            "Selenium.WebDriver": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[4.15.0, )"
             }
           },
           "imports": [

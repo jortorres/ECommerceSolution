@@ -1,10 +1,45 @@
 ﻿@page
-@model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    Layout = null;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background: #f8f9fa; }
+        .container { max-width: 600px; margin: auto; padding: 30px; background: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1 { color: #343a40; text-align: center; }
+        input, button { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ced4da; border-radius: 5px; font-size: 16px; }
+        button { background: #007bff; color: white; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        .success { color: #28a745; font-weight: bold; font-size: 18px; margin-top: 20px; text-align: center; padding: 15px; background: #d4edda; border: 1px solid #c3e6cb; border-radius: 5px; display: none; }
+        hr { border: 1px solid #dee2e6; margin: 30px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>E-Commerce Login</h1>
+        <form>
+            <input id="login" type="email" placeholder="Email" value="test@user.com" />
+            <input id="password" type="password" placeholder="Password" value="Pass123!" />
+            <button id="submit" type="button">Login</button>
+        </form>
+        <hr />
+        <h2>Product: MacBook Pro ($1999)</h2>
+        <p><strong>ID: 42</strong></p>
+        <button id="add-to-cart-42">Add to Cart</button>
+        <button id="checkout">Checkout</button>
+        <div id="result" class="success">Order Confirmed</div>
+    </div>
+
+    <script>
+        document.getElementById("submit").onclick = () => alert("Logged in!");
+        document.getElementById("add-to-cart-42").onclick = () => alert("Added to cart!");
+        document.getElementById("checkout").onclick = () => document.getElementById("result").style.display = "block";
+    </script>
+</body>
+</html>
